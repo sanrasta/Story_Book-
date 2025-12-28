@@ -1,0 +1,97 @@
+{
+  "books": [
+    {
+      "bookId": "story-001",
+      "title": "The Enchanted Forest",
+      "theme": "nature",
+      "targetKey": "enchanted-forest-cover",
+      "videoKeyIos": "enchanted-forest-ios",
+      "videoKeyAndroid": "enchanted-forest-android",
+      "physicalWidthMeters": 0.15,
+      "physicalHeightMeters": 0.225,
+      "locale": "en-US",
+      "aspectRatio": "1:1.5"
+    },
+    {
+      "bookId": "story-002",
+      "title": "Dragon's Quest",
+      "theme": "adventure",
+      "targetKey": "dragons-quest-cover",
+      "videoKeyIos": "dragons-quest-ios",
+      "videoKeyAndroid": "dragons-quest-android",
+      "physicalWidthMeters": 0.15,
+      "physicalHeightMeters": 0.225,
+      "locale": "en-US",
+      "aspectRatio": "1:1.5"
+    },
+    {
+      "bookId": "story-003",
+      "title": "Ocean Mysteries",
+      "theme": "underwater",
+      "targetKey": "ocean-mysteries-cover",
+      "videoKeyIos": "ocean-mysteries-ios",
+      "videoKeyAndroid": "ocean-mysteries-android",
+      "physicalWidthMeters": 0.15,
+      "physicalHeightMeters": 0.225,
+      "locale": "en-US",
+      "aspectRatio": "1:1.5"
+    }
+  ],
+  "schema": {
+    "version": "1.0.0",
+    "fields": {
+      "bookId": {
+        "type": "string",
+        "description": "Unique identifier for the book",
+        "required": true
+      },
+      "title": {
+        "type": "string",
+        "description": "Display title of the book",
+        "required": true
+      },
+      "theme": {
+        "type": "string",
+        "description": "Visual theme category",
+        "required": true
+      },
+      "targetKey": {
+        "type": "string",
+        "description": "Reference to AR target image in assets/targets/",
+        "required": true
+      },
+      "videoKeyIos": {
+        "type": "string",
+        "description": "Reference to iOS-optimized video in assets/videos/ios/",
+        "required": true
+      },
+      "videoKeyAndroid": {
+        "type": "string",
+        "description": "Reference to Android-optimized video in assets/videos/android/",
+        "required": true
+      },
+      "physicalWidthMeters": {
+        "type": "number",
+        "description": "Physical width of book cover in meters for AR tracking",
+        "required": true
+      },
+      "physicalHeightMeters": {
+        "type": "number",
+        "description": "Physical height of book cover in meters for AR tracking",
+        "required": true
+      },
+      "locale": {
+        "type": "string",
+        "description": "Locale/language of the book content",
+        "required": true
+      },
+      "aspectRatio": {
+        "type": "string",
+        "description": "Aspect ratio of target and video (must match)",
+        "required": true,
+        "default": "1:1.5"
+      }
+    }
+  }
+}
+

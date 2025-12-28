@@ -1,0 +1,6 @@
+# AR Target Images
+# Place book cover reference images here for AR tracking
+# Format: PNG or JPEG
+# Naming: {targetKey}.png (matches fixtures.json targetKey)
+# Recommended size: 300x450px (1:1.5 aspect ratio)
+
