@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "StoryVerse",
+    "slug": "storyverse",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "storyverse",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0A0E1A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.storyverse.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "StoryVerse needs camera access to scan book covers and display AR experiences.",
+        "UIRequiredDeviceCapabilities": ["arkit"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0A0E1A"
+      },
+      "package": "com.storyverse.app",
+      "permissions": ["android.permission.CAMERA"]
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "@reactvision/react-viro",
+        {
+          "ios": {
+            "cameraUsageDescription": "StoryVerse needs camera access for AR book scanning."
+          },
+          "android": {
+            "cameraPermission": true
+          }
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}
+
